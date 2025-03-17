@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Misterioso</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Adivinhe o Número</h1>
+    <section class="container">
+        <h2>Como jogar?</h2>
+
+        <section class="intro-text">
+            <p>
+                Este jogo consiste em tentar adivinhar o número secreto, através de dicas que indicam se o palpite foi maior ou menor que a resposta certa!
+            </p>
+            <p>
+                Para jogar, selecione a dificuldade logo abaixo, clique em inicar jogo e tente a sorte!
+                <br>
+                A dificuldade é o que moldará o range de números possíveis, quanto maior a dificuldade, maior o range!
+            </p>
+        </section>
+
+        <section class="dificuldades-list">
+            <h2>Escolha entre as dificuldades:</h2>
+            <ul>
+                <li><b>Fácil:</b> De 1 a 50</li>
+                <li><b>Médio:</b> De 1 a 100</li>
+                <li><b>Difícil:</b> De 1 a 200</li>
+                <li><b>Hardcore:</b> De 1 a 500</li>
+            </ul>
+        </section>
+
+        <section class="seletor-dificuldades">
+            <button class="carrossel-button" onclick="escolherDificuldade(-1)">⬅</button>
+            <div><p id="dificuldade">Fácil</p></div>
+            <button class="carrossel-button" onclick="escolherDificuldade(1)">➡</button>
+        </section>
+
+        <section class="center-botao">
+            <input type="button" value="Iniciar Jogo" onclick="iniciar()" class="action-button">
+        </section>
+
+    </section>
+
+    <section class="palpites-container">
+        
+        <section class="palpites-content">
+            <label for="number">Seu Palpite: </label>
+            <input type="number" name="number" id="number" class="input-number">
+        </section>
+
+        <section class="center-botao">
+            <input type="button" value="Verificar" onclick="verificar()" class="action-button">
+        </section>
+
+        <div id="res">
+
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
